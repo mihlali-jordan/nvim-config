@@ -160,6 +160,7 @@ require('lazy').setup({
         theme = 'vscode',
         component_separators = '|',
         section_separators = '',
+        disabled_filetypes = { 'packer', 'NvimTree' },
       },
     },
   },
@@ -170,8 +171,8 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
     opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
+      char = '•',
+      show_trailing_blankline_indent = true,
     },
   },
 
@@ -199,6 +200,8 @@ require('lazy').setup({
     },
   },
 
+  -- -----------------Custom Plugins ----------------------
+
   -- Transparent plugin to make IDE transparent
   {
     'xiyaowong/transparent.nvim',
@@ -215,6 +218,25 @@ require('lazy').setup({
   -- Install toggle term
   {
     { 'akinsho/toggleterm.nvim', version = '*', config = true },
+  },
+
+  { 'nvim-tree/nvim-web-devicons' },
+  {
+    'nvim-tree/nvim-tree.lua',
+    version = '*',
+    lazy = false,
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+    },
+    config = function()
+      require('nvim-tree').setup {}
+    end,
+  },
+  {
+    'lmburns/lf.nvim',
+    dependencies = {
+      'akinsho/toggleterm.nvim',
+    },
   },
 
   {
@@ -440,6 +462,20 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Custom keymaps
 vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', { desc = 'Open lazygit' })
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Toggle file tree' })
+-- vim.keymap.set('n', '<leader>lf', function()
+--   require('lf')
+--       .start -- nil, -- this is the path to open Lf (nil means CWD)    -- this argument is optional see `.start` below
+--       {
+--         -- Pass options (if any) that you would like
+--         dir = '',          -- directory where `lf` starts ('gwd' is git-working-directory)
+--         direction = 'float', -- window type: float horizontal vertical
+--         border = 'double', -- border kind: single double shadow curved
+--         height = 0.80,     -- height of the *floating* window
+--         width = 0.85,      -- width of the *floating* window
+--         mappings = true,   -- whether terminal buffer mapping is enabled
+--       }
+-- end, { noremap = true, desc = 'Open LF' })
 
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
@@ -507,6 +543,13 @@ local servers = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
     },
+  },
+}
+
+require('transparent').setup {
+  extra_groups = {
+    -- 'NormalFloat',    -- plugins which have float panel such as Lazy, Mason, LspInfo
+    'NvimTreeNormal', -- NvimTree
   },
 }
 

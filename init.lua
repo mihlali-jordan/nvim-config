@@ -204,6 +204,10 @@ require('lazy').setup({
 
   -- Transparent plugin to make IDE transparent
   {
+    'f-person/git-blame.nvim',
+    event = 'VeryLazy',
+  },
+  {
     'xiyaowong/transparent.nvim',
   },
 
@@ -219,6 +223,8 @@ require('lazy').setup({
   {
     { 'akinsho/toggleterm.nvim', version = '*', config = true },
   },
+
+  { 'jiangmiao/auto-pairs' },
 
   { 'nvim-tree/nvim-web-devicons' },
   {
@@ -249,6 +255,19 @@ require('lazy').setup({
       require('telescope').load_extension 'lazygit'
     end,
   },
+
+  {
+    'kylechui/nvim-surround',
+    version = '*', -- Use for stability; omit to use `main` branch for the latest features
+    event = 'VeryLazy',
+    config = function()
+      require('nvim-surround').setup {
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
+  },
+
+  -- -------------- End of custom plugins ----------------
 
   {
     -- Highlight, edit, and navigate code

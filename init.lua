@@ -486,6 +486,7 @@ vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Toggle file tr
 vim.keymap.set('n', '<leader>bn', ':bn<CR>', { desc = 'Next buffer' })
 vim.keymap.set('n', '<leader>bp', ':bp<CR>', { desc = 'Prev buffer' })
 vim.keymap.set('n', '<leader>bd', ':bd<CR>', { desc = 'Delete buffer' })
+vim.keymap.set('n', '<leader>tt', ':ToggleTerm<CR>', { desc = 'Toggle terminal' })
 -- vim.keymap.set('n', '<leader>lf', function()
 --   require('lf')
 --       .start -- nil, -- this is the path to open Lf (nil means CWD)    -- this argument is optional see `.start` below
@@ -573,6 +574,7 @@ require('transparent').setup {
   extra_groups = {
     -- 'NormalFloat',    -- plugins which have float panel such as Lazy, Mason, LspInfo
     'NvimTreeNormal', -- NvimTree
+    -- 'ToggleTerm',
   },
 }
 

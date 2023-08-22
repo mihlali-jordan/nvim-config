@@ -359,7 +359,7 @@ require('null-ls').setup {
   sources = {
     null_ls.builtins.formatting.stylua,
     null_ls.builtins.formatting.prettierd,
-    null_ls.builtins.diagnostics.eslint,
+    -- null_ls.builtins.diagnostics.eslint,
     null_ls.builtins.completion.spell,
   },
 }
@@ -384,6 +384,7 @@ vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
+-- vim.keymap.set('n', '<leader>bd', require('telescope.actions').delete_buffer, { desc = '[B]uffer [D]elete' })
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -463,6 +464,9 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- Custom keymaps
 vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', { desc = 'Open lazygit' })
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Toggle file tree' })
+vim.keymap.set('n', '<leader>bn', ':bn<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<leader>bp', ':bp<CR>', { desc = 'Prev buffer' })
+vim.keymap.set('n', '<leader>bd', ':bd<CR>', { desc = 'Delete buffer' })
 -- vim.keymap.set('n', '<leader>lf', function()
 --   require('lf')
 --       .start -- nil, -- this is the path to open Lf (nil means CWD)    -- this argument is optional see `.start` below

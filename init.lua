@@ -361,6 +361,7 @@ require('lazy').setup({
         },
         filters = {
           dotfiles = false,
+          exclude = { '.env*' },
         },
       }
     end,

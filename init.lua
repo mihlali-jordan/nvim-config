@@ -132,6 +132,8 @@ require('lazy').setup({
     },
   },
 
+  -- --------------Themes---------------
+
   -- {
   --   -- Theme inspired by Atom
   --   'navarasu/onedark.nvim',
@@ -141,14 +143,95 @@ require('lazy').setup({
   --   end,
   -- },
 
+  -- {
+  --   -- Theme inspired by Atom
+  --   'Mofiqul/vscode.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'vscode'
+  --   end,
+  -- },
+
+  -- {
+  --   -- Theme inspired by Atom
+  --   'kvrohit/mellow.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'mellow'
+  --   end,
+  -- },
+  --
+  -- {
+  --   -- Theme inspired by Atom
+  --   'rebelot/kanagawa.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'kanagawa-wave'
+  --   end,
+  -- },
+
+  -- {
+  --   -- Theme inspired by Atom
+  --   'marko-cerovac/material.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'deep ocean'
+  --   end,
+  -- },
+
   {
-    -- Theme inspired by Atom
-    'Mofiqul/vscode.nvim',
+    'folke/tokyonight.nvim',
+    lazy = false,
     priority = 1000,
+    opts = {},
     config = function()
-      vim.cmd.colorscheme 'vscode'
+      vim.cmd.colorscheme 'tokyonight-night'
     end,
   },
+
+  -- {
+  --   'whatyouhide/vim-gotham',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'gotham256'
+  --   end,
+  -- },
+
+  -- {
+  --   'challenger-deep-theme/vim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'challenger_deep'
+  --   end,
+  -- },
+
+  -- {
+  --   'nyoom-engineering/oxocarbon.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'oxocarbon'
+  --   end,
+  -- },
+
+  -- {
+  --   'Mofiqul/adwaita.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --
+  --   -- configure and set on startup
+  --   config = function()
+  --     vim.g.adwaita_darker = true             -- for darker version
+  --     vim.g.adwaita_disable_cursorline = true -- to disable cursorline
+  --     vim.g.adwaita_transparent = true        -- makes the background transparent
+  --     vim.cmd 'colorscheme adwaita'
+  --   end,
+  -- },
 
   {
     -- Set lualine as statusline
@@ -157,7 +240,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'vscode',
+        -- theme = 'vscode',
         component_separators = '|',
         section_separators = '',
         disabled_filetypes = { 'packer', 'NvimTree' },

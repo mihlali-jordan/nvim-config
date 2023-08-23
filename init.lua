@@ -331,7 +331,6 @@ require('lazy').setup({
       require('nvim-tree').setup {
         sort_by = 'case_sensitive',
         view = {
-          width = 30,
           float = {
             enable = true,
             open_win_config = function()

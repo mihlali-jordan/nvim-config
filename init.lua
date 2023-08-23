@@ -293,6 +293,7 @@ require('lazy').setup({
   {
     'xiyaowong/transparent.nvim',
   },
+  -- { 'tribela/vim-transparent' },
 
   -- Plugin for assisting with JSX comments
   { 'JoosepAlviste/nvim-ts-context-commentstring', lazy = true },
@@ -318,7 +319,21 @@ require('lazy').setup({
       'nvim-tree/nvim-web-devicons',
     },
     config = function()
-      require('nvim-tree').setup {}
+      require('nvim-tree').setup {
+        sort_by = 'case_sensitive',
+        view = {
+          width = 30,
+          float = {
+            enable = true,
+          },
+        },
+        renderer = {
+          group_empty = true,
+        },
+        filters = {
+          dotfiles = false,
+        },
+      }
     end,
   },
   {

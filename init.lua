@@ -263,8 +263,12 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
     opts = {
-      char = '•',
+      -- char = '•',
+      char = '',
       show_trailing_blankline_indent = true,
+      space_char_blankline = ' ',
+      show_current_context = true,
+      -- show_current_context_start = true,
     },
   },
 
@@ -506,6 +510,11 @@ require('null-ls').setup {
   sources = {
     null_ls.builtins.formatting.stylua,
     null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.formatting.gofumpt,
+    null_ls.builtins.diagnostics.gopls,
+    null_ls.builtins.formatting.goimports,
+    null_ls.builtins.formatting.golines,
+    null_ls.builtins.formatting.goimports_reviser,
     -- null_ls.builtins.diagnostics.eslint,
     null_ls.builtins.completion.spell,
   },

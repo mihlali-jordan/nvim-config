@@ -188,15 +188,15 @@ require('lazy').setup({
   --   end,
   -- },
 
-  {
-    'folke/tokyonight.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {},
-    config = function()
-      vim.cmd.colorscheme 'tokyonight-night'
-    end,
-  },
+  -- {
+  --   'folke/tokyonight.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'tokyonight-night'
+  --   end,
+  -- },
 
   -- {
   --   'whatyouhide/vim-gotham',
@@ -218,15 +218,15 @@ require('lazy').setup({
   --   end,
   -- },
 
-  -- {
-  --   'nyoom-engineering/oxocarbon.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   opts = {},
-  --   config = function()
-  --     vim.cmd.colorscheme 'oxocarbon'
-  --   end,
-  -- },
+  {
+    'nyoom-engineering/oxocarbon.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      vim.cmd.colorscheme 'oxocarbon'
+    end,
+  },
 
   -- {
   --   'Mofiqul/adwaita.nvim',
@@ -400,12 +400,12 @@ require('lazy').setup({
   },
 
   {
-    "lewis6991/hover.nvim",
+    'lewis6991/hover.nvim',
     config = function()
-      require("hover").setup {
+      require('hover').setup {
         init = function()
           -- Require providers
-          require("hover.providers.lsp")
+          require 'hover.providers.lsp'
           -- require('hover.providers.gh')
           -- require('hover.providers.gh_user')
           -- require('hover.providers.jira')
@@ -413,18 +413,18 @@ require('lazy').setup({
           -- require('hover.providers.dictionary')
         end,
         preview_opts = {
-          border = nil
+          border = nil,
         },
         -- Whether the contents of a currently open hover window should be moved
         -- to a :h preview-window when pressing the hover keymap.
         preview_window = false,
-        title = true
+        title = true,
       }
 
       -- Setup keymaps
-      vim.keymap.set("n", "K", require("hover").hover, { desc = "hover.nvim" })
-      vim.keymap.set("n", "gK", require("hover").hover_select, { desc = "hover.nvim (select)" })
-    end
+      vim.keymap.set('n', 'K', require('hover').hover, { desc = 'hover.nvim' })
+      vim.keymap.set('n', 'gK', require('hover').hover_select, { desc = 'hover.nvim (select)' })
+    end,
   },
 
   -- -------------- End of custom plugins ----------------
@@ -539,7 +539,7 @@ require('null-ls').setup {
     null_ls.builtins.formatting.stylua,
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.formatting.gofumpt,
-    null_ls.builtins.diagnostics.gopls,
+    -- null_ls.builtins.diagnostics.gopls,
     null_ls.builtins.formatting.goimports,
     null_ls.builtins.formatting.golines,
     null_ls.builtins.formatting.goimports_reviser,

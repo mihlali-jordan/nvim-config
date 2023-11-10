@@ -141,7 +141,7 @@ require('lazy').setup({
     },
   },
 
-  -- --------------Themes---------------
+  -- -------------- Custom Themes---------------
 
   -- {
   --   -- Theme inspired by Atom
@@ -218,13 +218,53 @@ require('lazy').setup({
   --   end,
   -- },
 
+  -- {
+  --   'nyoom-engineering/oxocarbon.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'oxocarbon'
+  --   end,
+  -- },
+
+  -- {
+  --   'AlexvZyl/nordic.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'nordic'
+  --   end,
+  -- },
+
+  -- {
+  --   'rose-pine/neovim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'rose-pine'
+  --   end,
+  -- },
+
+  -- {
+  --   'ofirgall/ofirkai.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'ofirkai'
+  --   end,
+  -- },
+
   {
-    'nyoom-engineering/oxocarbon.nvim',
+    'NLKNguyen/papercolor-theme',
     lazy = false,
     priority = 1000,
     opts = {},
     config = function()
-      vim.cmd.colorscheme 'oxocarbon'
+      vim.cmd.colorscheme 'PaperColor'
     end,
   },
 

@@ -258,15 +258,48 @@ require('lazy').setup({
   --   end,
   -- },
 
+  -- {
+  --   'NLKNguyen/papercolor-theme',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'PaperColor'
+  --   end,
+  -- },
   {
-    'NLKNguyen/papercolor-theme',
+    'luisiacc/the-matrix.nvim',
     lazy = false,
     priority = 1000,
-    opts = {},
     config = function()
-      vim.cmd.colorscheme 'PaperColor'
+      vim.cmd.colorscheme 'thematrix' -- set the colorscheme
     end,
   },
+  --
+  -- {
+  --   'scottmckendry/cyberdream.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('cyberdream').setup {
+  --       -- Recommended - see "Configuring" below for more config options
+  --       transparent = true,
+  --       italic_comments = true,
+  --       hide_fillchars = true,
+  --       borderless_telescope = true,
+  --     }
+  --     vim.cmd 'colorscheme cyberdream' -- set the colorscheme
+  --   end,
+  -- },
+
+  -- {
+  --   'AlexvZyl/nordic.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('nordic').load()
+  --   end,
+  -- },
 
   -- {
   --   'Mofiqul/adwaita.nvim',

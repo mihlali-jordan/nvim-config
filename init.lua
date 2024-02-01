@@ -218,15 +218,15 @@ require('lazy').setup({
   --   end,
   -- },
 
-  -- {
-  --   'nyoom-engineering/oxocarbon.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   opts = {},
-  --   config = function()
-  --     vim.cmd.colorscheme 'oxocarbon'
-  --   end,
-  -- },
+  {
+    'nyoom-engineering/oxocarbon.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      vim.cmd.colorscheme 'oxocarbon'
+    end,
+  },
 
   -- {
   --   'AlexvZyl/nordic.nvim',
@@ -267,14 +267,23 @@ require('lazy').setup({
   --     vim.cmd.colorscheme 'PaperColor'
   --   end,
   -- },
-  {
-    'luisiacc/the-matrix.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'thematrix' -- set the colorscheme
-    end,
-  },
+  -- {
+  --   'luisiacc/the-matrix.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'thematrix' -- set the colorscheme
+  --   end,
+  -- },
+  -- {
+  --   'craftzdog/solarized-osaka.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'solarized-osaka'
+  --   end,
+  -- },
   --
   -- {
   --   'scottmckendry/cyberdream.nvim',
@@ -298,6 +307,24 @@ require('lazy').setup({
   --   priority = 1000,
   --   config = function()
   --     require('nordic').load()
+  --   end,
+  -- },
+  -- {
+  --   'talha-akram/noctis.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'noctis_lilac'
+  --   end,
+  -- },
+  -- {
+  --   'catppuccin/nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = function()
+  --     vim.cmd.colorscheme 'catppuccin'
   --   end,
   -- },
 
@@ -379,7 +406,7 @@ require('lazy').setup({
   {
     'xiyaowong/transparent.nvim',
   },
-  -- { 'tribela/vim-transparent' },
+  -- DO NOT USE { 'tribela/vim-transparent' },
 
   -- Plugin for assisting with JSX comments
   { 'JoosepAlviste/nvim-ts-context-commentstring', lazy = true },
